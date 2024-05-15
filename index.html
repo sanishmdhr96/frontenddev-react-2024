@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="index.css" rel="stylesheet" />
+    <title>Document</title>
+    <!-- Internal CSS -->
+    <!-- 
+        TOP Priority -> inline styling 
+        Second -> ID selectors #id
+        Third -> Class .class
+        Fourth -> Elements p, div, h1
+     -->
+
+    <!-- 
+        1. Inheritance
+        2. Rule order -> hierarchy
+        3. Specificity
+      -->
+    <style>
+
+      *{
+        box-sizing: border-box;
+      }
+
+     button{
+      background-color: red;
+      color: white;
+      border: 0px;
+      border-radius: 5px;
+      font-size: 12px;
+      padding: 8px 10px;
+     }
+
+     button:hover{
+      background-color: rgb(213, 84, 84);
+     }
+
+
+
+     div p{
+      font-size: 14px;
+      color: blue;
+      font-style: italic;
+     }
+
+     div p:first-child{
+      color: red !important;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid black;
+     }
+
+     div p:nth-child(2){
+      color: green;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid black;
+     }
+  div p:nth-child(3){
+      color: orange;
+     }
+ 
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p style="color: purple;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> -->
+    <!-- <button>
+      Submit
+    </button> -->
+  </body>
+</html>
